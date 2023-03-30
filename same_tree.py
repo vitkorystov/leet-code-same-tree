@@ -1,4 +1,3 @@
-# My solution for leetcode task
 # https://leetcode.com/problems/same-tree/
 
 
