@@ -1,3 +1,3 @@
-# leet-code-same-tree
+# Leetcode tasks
 
-My solution for leetcode task https://leetcode.com/problems/same-tree/
+My solutions for some leetcode tasks.
