@@ -1,6 +1,6 @@
-# https://leetcode.com/problems/rising-temperature/description/
+-- https://leetcode.com/problems/rising-temperature/description/
 
-# MySql
+-- MySql
 
 SELECT
     Id
