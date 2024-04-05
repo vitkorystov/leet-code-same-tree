@@ -22,13 +22,12 @@ class Solution:
                 if new_current_i > p:
                     target.append(x_)
                 x_ = x_ * x_
-                return rec(x_, new_current_i, current_i, p)
+                rec(x_, new_current_i, current_i, p)
             elif current_i > p:
                 new_p = p - last_i
-                return rec(x, 1, 1, new_p)
+                rec(x, 1, 1, new_p)
             else:
                 target.append(x_)
-                return x_
 
         rec(x, 1, 1, abs(n))
 
