@@ -38,6 +38,3 @@ class Solution:
 
 
 print(Solution().postorderTraversal(t1))  # [2, 4, 5, 3, 1]
-
-
-
