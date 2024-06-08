@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/remove-linked-list-elements/
-from copy import deepcopy
+
 from typing import Optional
 
 
