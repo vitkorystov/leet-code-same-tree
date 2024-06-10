@@ -68,39 +68,6 @@ class Solution:
                 if tree:
                     if d > max_d:
                         max_d = d
-                    foo(tree.left, d+1)
-                    foo(tree.right, d+1)
-            foo(tree)
-            return max_d
-
-        res = True
-
-        def rec(tree: TreeNode):
-            nonlocal res
-            if tree:
-                left_d = get_depth(tree.left)
-                right_d = get_depth(tree.right)
-                if abs(left_d - right_d) > 1:
-                    res = False
-                rec(tree.left)
-                rec(tree.right)
-
-        rec(root)
-
-        return res
-
-
-class Solution:
-    def isBalanced(self, root: Optional[TreeNode]) -> bool:
-
-        def get_depth(tree):
-            max_d = 0
-
-            def foo(tree, d=1):
-                nonlocal max_d
-                if tree:
-                    if d > max_d:
-                        max_d = d
                     foo(tree.left, d + 1)
                     foo(tree.right, d + 1)
 
