@@ -33,4 +33,4 @@ print(Solution().binaryTreePaths(
         right=TreeNode(3, left=TreeNode(6), right=TreeNode(7))
         )
     )
-)
+)  # ['1->2->4', '1->3->6', '1->3->7']
