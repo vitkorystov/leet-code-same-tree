@@ -13,7 +13,7 @@ class Solution(object):
 
         res: bool = False
 
-        def rec(left: int, right: int, base: int):
+        def rec(left: int, right: int, base: int) -> bool:
             nonlocal res
             attempt = 2**base
             if attempt > n:
@@ -29,11 +29,11 @@ class Solution(object):
             else:
                 res = True
 
-        rec(0, 32, 2)
+        rec(0, 32, 16)
 
         return res
 
 
-print(Solution().isPowerOfTwo(5))
+print(Solution().isPowerOfTwo(4))
 
 
