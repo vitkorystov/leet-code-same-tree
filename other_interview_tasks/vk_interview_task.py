@@ -41,27 +41,20 @@ assert result_dict_rec == expected
 # 2) Solution with loop
 loop_result = dict()
 
-for key, value in original.items():
+keys = list(original.keys())
+while keys:
+    key = keys[0]
+    value = original.get(key)
     if not isinstance(value, dict):
         loop_result[key] = value
     else:
-        prefix = ''
-        length_inner_dict = 0
-        prefix_inner_dict = ''
-        while value:
-            k, v = value.popitem()
-            if isinstance(v, dict):
-                value.update(v)
-                prefix = f'{key}.{k}'
-                length_inner_dict = len(v)
-                prefix_inner_dict = k
-
-            else:
-                if length_inner_dict > 0:
-                    loop_result[f'{prefix}.{k}'] = v
-                    length_inner_dict -= 1
-                else:
-                    loop_result[f'{prefix}.{k}'.replace(f'.{prefix_inner_dict}', '')] = v
+        nested_keys = value.keys()
+        for k in nested_keys:
+            new_key = f"{key}.{k}"
+            original[new_key] = value.get(k)
+            keys.append(new_key)
+    del original[key]
+    keys.remove(key)
 
 
 assert loop_result == expected

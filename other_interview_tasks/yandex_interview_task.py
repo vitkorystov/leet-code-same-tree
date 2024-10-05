@@ -1,7 +1,6 @@
 from collections import defaultdict
-from email.policy import default
 
-# Даны пары городов, нужно составить маршрут полета
+# Given tickets with cities pair, needs create full route:
 # [("Belgrade", "Moscow"), ("Erevan", "Tokyo"), ("Tokyo", "Baku"), ("Moscow", "Erevan")]
 # -> ["Belgrade", "Moscow", "Erevan", "Tokyo", "Baku"]
 
